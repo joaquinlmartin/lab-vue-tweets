@@ -1,46 +1,18 @@
 <template>
   <div class="app">
     <h1>Hello!</h1>
-    <Tweet />
+    <Tweet name='Thoughts of Dog®' image='https://i.imgur.com/b0EdHVV.jpg'  handle='dog_feelings' timestamp='1h ago'
+    message='the human likes to say. that i live here rent free. but i would argue.
+  this housing accommodation.
+  is my payment. for a lifetime of love. and excellent company'/>
   </div>
 </template>
 
 <script>
-
 import Tweet from './components/Tweet.vue';
 
 export default {
-  data: () => ({
-    tweets: [
-      {
-        user: {
-          name: 'Thoughts of Dog®',
-          image: 'https://i.imgur.com/b0EdHVV.jpg',
-          handle: 'dog_feelings',
-        },
-        timestamp: '1h ago',
-        message: 'the human likes to say. that i live here rent free. but i would argue. this housing accommodation. is my payment. for a lifetime of love. and excellent company',
-      },
-      {
-        user: {
-          name: 'Thoughts of Dog®',
-          image: 'https://i.imgur.com/b0EdHVV.jpg',
-          handle: 'dog_feelings',
-        },
-        timestamp: '2h ago',
-        message: 'sometimes. the human presses their noggin against mine. to figure out what i’m thinking. so i just think really hard. about how much i love them. and hope they figure it out',
-      },
-      {
-        user: {
-          name: 'Thoughts of Dog®',
-          image: 'https://i.imgur.com/b0EdHVV.jpg',
-          handle: 'dog_feelings',
-        },
-        timestamp: '3h ago',
-        message: 'here is what. i plan to accomplish today: \n\n2. bark loudly. but at nothing \n7. lose my ball under the couch\n7b. politely ask the human. to get my ball\n3. immediately lose it again. under the same couch\n4. big nap. you have worked hard\n2. repeat',
-      },
-    ],
-  }),
+  name: 'App',
   components: { Tweet },
 };
 </script>
@@ -97,80 +69,4 @@ export default {
   .app {
     padding: 20px;
   }
-
-  .tweet {
-    margin: 0 auto;
-    min-width: 480px;
-    max-width: 640px;
-    min-height: 80px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    display: flex;
-    font-size: 1.1rem;
-    line-height: 18px;
-  }
-
-  .body {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .top {
-    display: flex;
-    line-height: 1.4rem;
-  }
-
-  .more {
-    margin-left: 20px;
-  }
-
-  .profile {
-    width: 50px;
-    height: 50px;
-    border-radius: 50px;
-    margin-right: 10px;
-  }
-
-  .name {
-    font-weight: bold;
-    margin-bottom: 0.5em;
-    margin-right: 0.3em;
-  }
-
-  .handle {
-    color: #536471;
-    margin-left: 3px;
-    margin-right: 3px;
-  }
-
-  .timestamp {
-    color: #536471;
-    font-size: 1.1rem;
-  }
-
-  .timestamp::before {
-    content: "·";
-    padding-right: 0.3em;
-    font-size: 1.1rem;
-    font-weight: 600;
-  }
-
-  .message {
-    text-align: left;
-    font-stretch: 100%;
-    font-weight: 400;
-    line-height: 1.6rem;
-    overflow-wrap: break-word;
-    white-space: pre-wrap;
-  }
-
-  .actions {
-    padding: 5px 5px;
-    width: 360px;
-    display: flex;
-    justify-content: space-between;
-    color: #536471;
-  }
-
 </style>
